@@ -50,7 +50,7 @@ The tool will automatically detect the input format and convert it to the approp
 
 After making changes to the texture **drag and drop one or more files or folders** onto the `.bat` file to recompile file back to .xnb format.
 
-Game does not have to be relaunched to see differences, just reselect the skin.
+Game does not have to be relaunched to see modified texture, just reselect the skin.
 
 Where to looks for game files -> "SteamLibrary\steamapps\common\STUNTBOOST", best approach is to replace Supporter skins which are in -> "SteamLibrary\steamapps\common\STUNTBOOST\Content\Models\Resources\Board".
 
