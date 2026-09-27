@@ -1,6 +1,6 @@
 # XNB Asset Tool
 
-A small Python utility for **decompiling and recompiling MonoGame `.xnb` game assets** between their compiled container format and editable files.
+A small Python utility for **decompiling and recompiling `.xnb` Stuntboost assets** between their compiled container format and editable files.
 
 The tool was created by reverse-engineering a specific game's content pipeline and supports four asset types:
 
@@ -12,6 +12,8 @@ The tool was created by reverse-engineering a specific game's content pipeline a
 | Raw Buffer | `Microsoft.Xna.Framework.Content.ArrayReader<Byte>` | `.bin`          |
 
 See [`FORMATS.md`](FORMATS.md) for the technical details of the supported formats and the `.xnb` container structure.
+
+## !!! ALL MODIFIED FILES WILL BE REVERTED WITH EVERY GAME UPDATE. ALWAYS BACK UP YOUR FILES BEFORE MAKING ANY CHANGES !!!
 
 ## Requirements
 
@@ -45,6 +47,14 @@ The easiest way to use the tool is with `xnb_asset_batch.bat`.
 Simply **drag and drop one or more files or folders** onto the `.bat` file.
 
 The tool will automatically detect the input format and convert it to the appropriate output format.
+
+After making changes to the texture **drag and drop one or more files or folders** onto the `.bat` file to recompile file back to .xnb format.
+
+Game does not have to be relaunched to see differences, just reselect the skin.
+
+Where to looks for game files -> "SteamLibrary\steamapps\common\STUNTBOOST", best approach is to replace Supporter skins which are in -> "SteamLibrary\steamapps\common\STUNTBOOST\Content\Models\Resources\Board".
+
+Have fun, below few examples and more information.
 
 For example:
 
@@ -416,7 +426,6 @@ Place the files you want to work with in a separate directory.
 input/
 ├── Car.xnb
 ├── Car.bin.xnb
-└── Car_Diffuse.xnb
 ```
 
 ### 2. Decompile them
@@ -433,8 +442,6 @@ input/
 ├── Car.gltf
 ├── Car.bin.xnb
 ├── Car.bin
-├── Car_Diffuse.xnb
-└── Car_Diffuse.png
 ```
 
 ### 3. Edit the assets
@@ -448,7 +455,7 @@ For example:
 ### 4. Recompile
 
 ```bash
-python xnb_asset_tool.py input/Car.gltf input/Car.bin input/Car_Diffuse.png
+python xnb_asset_tool.py input/Car.gltf input/Car.bin
 ```
 
 The tool generates the corresponding `.xnb` files.
@@ -461,8 +468,8 @@ Back up the original files before replacing them.
 
 # Disclaimer
 
-This tool was created by reverse-engineering asset files from a specific game for personal modding and backup purposes.
+This tool was created by reverse-engineering asset files from a specific game for personal modding and backup purposes. If you have paid for this tool, you have been scammed.
 
-It is **not affiliated with or endorsed by the game's developers**.
+It is **not affiliated with the creators of the game Stunt Boost and is not officially supported by them** skins are not visible in leaderboard as custom textures are only visible locally.
 
 Use it only with content you have the rights to modify.
